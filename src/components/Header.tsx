@@ -1,5 +1,5 @@
 import classes from "./Header.module.css";
-
+import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <>
@@ -10,9 +10,15 @@ export default function Header() {
         </div>
         <div className={classes["container"]}></div>
         <div className={classes.nav}>
-          <div className={classes["nav-item"]}>Home</div>
-          <div className={classes["nav-item"]}>Shop</div>
-          <div className={classes["nav-item"]}>Cart</div>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <div className={classes["nav-item"]}>Home</div>
+          </Link>
+          <Link to="/shop" style={{ textDecoration: "none" }}>
+            <div className={classes["nav-item"]}>Shop</div>
+          </Link>
+          <Link to="/cart" style={{ textDecoration: "none" }}>
+            <div className={classes["nav-item"]}>Cart</div>
+          </Link>
         </div>
       </div>
     </>

@@ -8,6 +8,7 @@
 }
 .header .header-text {
   font-size: 4rem;
+  font-weight: 500;
 }
 .header .header-subtext {
   font-size: 1.5rem;
@@ -21,4 +22,8 @@
   background-color: rgb(154, 201, 144);
   width: 100%;
   padding: 10px 0px 10px 0px;
+}
+
+.nav-item {
+  color: black;
 }/*# sourceMappingURL=Header.module.css.map */
