@@ -1,7 +1,7 @@
 import Card from "./Card";
-// Fetch and return an array of cards listing products
 import classes from "./Shop.module.css";
 import { useEffect, useState } from "react";
+
 export default function Shop() {
   const [products, setProducts] = useState([]);
 
@@ -10,7 +10,7 @@ export default function Shop() {
       .then((res) => res.json())
       .then((json) =>
         json.filter(
-          (item) =>
+          (item: { category: string }) =>
             item.category === "men's clothing" ||
             item.category === "women's clothing"
         )

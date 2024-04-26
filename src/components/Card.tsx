@@ -5,7 +5,7 @@ export default function Card({ image, title, price }) {
     <>
       <div className={classes.container}>
         <img src={`${image}`} alt="" />
-        <h1>Price: {price}</h1>
+        <h1>Price: ${price}</h1>
         <h2>{title}</h2>
         <div className={classes.centered}>
           <button>Add to Cart</button>
