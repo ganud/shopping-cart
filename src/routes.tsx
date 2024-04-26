@@ -1,18 +1,16 @@
 import App from "./App";
-import Header from "./components/Header";
 import Home from "./components/Home";
-
+import Page from "./components/Page";
 const routes = [
   {
     path: "/",
-    element: <Home />,
+    element: <Page render={<Home />}></Page>,
   },
   {
     path: "shop",
     element: (
       <>
-        <Header></Header>
-        <div>hello</div>
+        <Page></Page>
       </>
     ),
   },
@@ -20,8 +18,7 @@ const routes = [
     path: "cart",
     element: (
       <>
-        <Header></Header>
-        cart stuff here
+        <Page></Page>
       </>
     ),
   },

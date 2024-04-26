@@ -1,0 +1,35 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(123, 123, 123);
+}
+
+.body {
+  flex: 1;
+  background: url("https://i.redd.it/a36mz5qpy6m61.jpg") no-repeat center center
+    fixed;
+  box-shadow: inset 0 0 0 99999px rgba(52, 52, 52, 0.6);
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+h2 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+p {
+  color: rgb(201, 201, 201);
+  text-align: center;
+  max-width: 60%;
+}
