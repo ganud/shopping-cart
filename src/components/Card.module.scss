@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  background-color: rgb(211, 235, 216);
+  padding: 20px;
+  border-radius: 10%;
+  gap: 10px;
+}
+
+img {
+  height: 50%;
+  width: 50%;
+}
+
+h2 {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 100;
+  color: black;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+
+button {
+  width: 40%;
+  border: 1px solid green;
+  padding: 10px 0px 10px 0px;
+  border-radius: 10px;
+  color: rgb(0, 84, 0);
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+}

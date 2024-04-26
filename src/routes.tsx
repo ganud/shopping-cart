@@ -1,6 +1,6 @@
-import App from "./App";
 import Home from "./components/Home";
 import Page from "./components/Page";
+import Shop from "./components/Shop";
 const routes = [
   {
     path: "/",
@@ -10,7 +10,7 @@ const routes = [
     path: "shop",
     element: (
       <>
-        <Page></Page>
+        <Page render={<Shop />}></Page>
       </>
     ),
   },
