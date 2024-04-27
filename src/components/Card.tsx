@@ -1,6 +1,6 @@
 import classes from "./Card.module.css";
 
-export default function Card({ image, title, price }) {
+export default function Card({ image, title, price, id }) {
   return (
     <>
       <div className={classes.container}>
