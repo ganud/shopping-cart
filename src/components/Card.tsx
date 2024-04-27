@@ -8,6 +8,9 @@ export default function Card({ image, title, price }) {
         <h1>Price: ${price}</h1>
         <h2>{title}</h2>
         <div className={classes.centered}>
+          <input type="number" />
+        </div>
+        <div className={classes.centered}>
           <button>Add to Cart</button>
         </div>
       </div>
