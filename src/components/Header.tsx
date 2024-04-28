@@ -1,6 +1,6 @@
 import classes from "./Header.module.css";
 import { Link } from "react-router-dom";
-export default function Header() {
+export default function Header({ quantity }) {
   return (
     <>
       <div className={classes.header}>
@@ -17,7 +17,7 @@ export default function Header() {
             <div className={classes["nav-item"]}>Shop</div>
           </Link>
           <Link to="/cart" style={{ textDecoration: "none" }}>
-            <div className={classes["nav-item"]}>Cart</div>
+            <div className={classes["nav-item"]}>Cart ({quantity})</div>
           </Link>
         </div>
       </div>
