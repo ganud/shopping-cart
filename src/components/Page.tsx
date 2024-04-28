@@ -6,7 +6,6 @@ import { Outlet } from "react-router-dom";
 // State contains the id of product, and quantity of that product
 export default function Page() {
   const [products, setProducts] = useState([]);
-
   return (
     <>
       <div className={classes["container"]}>

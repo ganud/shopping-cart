@@ -1,11 +1,11 @@
 import Card from "./Card";
 import classes from "./Shop.module.css";
+import getQuantity from "../helpers/getQuantity.ts";
 import { useEffect, useState } from "react";
 import { useOutletContext } from "react-router-dom";
 
 export default function Shop() {
   const [products, setProducts] = useOutletContext();
-
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/")
       .then((res) => res.json())
@@ -19,11 +19,11 @@ export default function Shop() {
       .then((filtered) => {
         // Add a quantity value for the cart
         let filteredit = filtered.map((product) => {
-          if (products.length !== 0) {
-            // If there already are items in the cart
+          if (getQuantity(products) !== 0) {
+            // Check if there already products in the cart
             return product;
           }
-          return { ...product, quantity: 0 }; // Else set all quantities to zero
+          return { ...product, quantity: 0 }; // By default, all quantiies are zero
         });
         setProducts(filteredit);
       });
@@ -39,6 +39,8 @@ export default function Shop() {
             title={product.title}
             price={product.price}
             id={product.id}
+            setProducts={setProducts}
+            products={products}
           ></Card>
         ))}
       </div>
