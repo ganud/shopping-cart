@@ -1,0 +1,21 @@
+.container {
+  min-height: 10vh;
+  border-radius: 10px;
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+}
+
+.productImage {
+  min-height: 100px;
+  width: 100px;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=CartItem.module.css.map */

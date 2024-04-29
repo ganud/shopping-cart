@@ -5,6 +5,5 @@ export default function getQuantity(products: Array<object>) {
       sum = products[i].quantity + sum;
     }
   }
-  console.log(sum);
   return sum;
 }

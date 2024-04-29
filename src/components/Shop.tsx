@@ -1,7 +1,6 @@
 import Card from "./Card";
 import classes from "./Shop.module.css";
-import getQuantity from "../helpers/getQuantity.ts";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 
 export default function Shop() {
@@ -23,7 +22,6 @@ export default function Shop() {
             return { ...product, quantity: 0 };
           });
           setProducts(filteredit);
-          console.log(products);
         });
     }
   }, []);

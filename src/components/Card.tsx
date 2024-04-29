@@ -25,7 +25,6 @@ export default function Card({
       .sort((a, b) => (a.id > b.id ? 1 : -1)); // Sort by id like the original API
 
     setProducts(formattedProducts);
-    console.log(products);
   }
 
   const [quantity, setQuantity] = useState(1);
@@ -33,7 +32,7 @@ export default function Card({
   return (
     <>
       <div className={classes.container}>
-        <img src={`${image}`} alt="" />
+        <img src={`${image}`} alt="" className={classes.productImage} />
         <h1>Price: ${price}</h1>
         <h2>{title}</h2>
         <div className={classes.centered}>

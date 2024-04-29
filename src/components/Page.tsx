@@ -13,7 +13,7 @@ export default function Page() {
       <div className={classes["container"]}>
         <Header quantity={totalQuantity}></Header>
         <div className={classes.body}>
-          <Outlet context={[products, setProducts, totalQuantity]}></Outlet>
+          <Outlet context={[products, setProducts]}></Outlet>
         </div>
       </div>
     </>

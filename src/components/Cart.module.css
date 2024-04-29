@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 30px;
+  align-items: center;
+  max-width: 80vw;
+  background-color: white;
+  padding: 20px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=Cart.module.css.map */
