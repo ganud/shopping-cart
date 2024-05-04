@@ -2,16 +2,32 @@
 import { useOutletContext } from "react-router-dom";
 import CartItem from "./CartItem";
 import classes from "./Cart.module.css";
+import getQuantity from "../helpers/getQuantity";
+
 export default function Cart() {
   const [products, setProducts] = useOutletContext();
+  const productsInCart = products.filter((product) => product.quantity !== 0);
+  console.log(productsInCart);
 
+  if (getQuantity(products) === 0) {
+    return <h2>No items in cart</h2>;
+  }
+
+  // Only renders items with a quantity value
   return (
     <>
       <div className={classes.centered}>
         <div className={classes.container}>
-          <CartItem image="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"></CartItem>
-          <CartItem image="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"></CartItem>
-          <CartItem image="https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg"></CartItem>
+          Your Cart
+          {productsInCart.map((product) => (
+            <CartItem
+              image={product.image}
+              id={product.id}
+              title={product.title}
+              quantity={product.quantity}
+            ></CartItem>
+          ))}
+          <div className={classes.priceTotal}>Total: $420.69</div>
         </div>
       </div>
     </>

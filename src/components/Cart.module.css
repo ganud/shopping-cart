@@ -12,4 +12,10 @@
 .centered {
   display: flex;
   justify-content: center;
+}
+
+.priceTotal {
+  display: flex;
+  justify-content: end;
+  width: 100%;
 }/*# sourceMappingURL=Cart.module.css.map */
