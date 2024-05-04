@@ -18,7 +18,7 @@ export default function Shop() {
         )
         .then((filtered) => {
           // Add a quantity value for the product selection
-          let filteredit = filtered.map((product) => {
+          let filteredit = filtered.map((product: object) => {
             return { ...product, quantity: 0 };
           });
           setProducts(filteredit);
@@ -32,9 +32,7 @@ export default function Shop() {
         {products.map((product) => (
           <Card
             key={product.id}
-            image={product.image}
-            title={product.title}
-            price={product.price}
+            product={product}
             id={product.id}
             setProducts={setProducts}
             products={products}

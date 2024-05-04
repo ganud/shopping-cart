@@ -1,23 +1,18 @@
 import classes from "./Card.module.css";
 import { useState } from "react";
-export default function Card({
-  image,
-  title,
-  price,
-  id,
-  products,
-  setProducts,
-}) {
+export default function Card({ product, id, products, setProducts }) {
   function incrementQuantity(amount: number) {
     // Update the specific item with new quantity
-    let product = products.filter((item) => item.id === id);
+    let product = products.filter((item: { id: number }) => item.id === id);
     product[0].quantity = product[0].quantity + amount;
     // Delete the old item from product list
-    let filteredProducts = products.filter((item) => item.id !== id);
+    let poppedProducts = products.filter(
+      (item: { id: number }) => item.id !== id
+    );
 
     // Format back into a readable format by map to add the new item
     let trimmedProduct = product[0];
-    let updatedProducts = { ...filteredProducts, trimmedProduct };
+    let updatedProducts = { ...poppedProducts, trimmedProduct };
     let formattedProducts = Object.keys(updatedProducts)
       .map((key) => {
         return updatedProducts[key];
@@ -32,9 +27,9 @@ export default function Card({
   return (
     <>
       <div className={classes.container}>
-        <img src={`${image}`} alt="" className={classes.productImage} />
-        <h1>Price: ${price}</h1>
-        <h2>{title}</h2>
+        <img src={`${product.image}`} alt="" className={classes.productImage} />
+        <h1>Price: ${product.price}</h1>
+        <h2>{product.title}</h2>
         <div className={classes.centered}>
           <input
             type="number"

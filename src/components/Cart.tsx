@@ -21,6 +21,7 @@ export default function Cart() {
           Your Cart
           {productsInCart.map((product) => (
             <CartItem
+              key={product.id}
               product={product}
               products={products}
               setProducts={setProducts}
