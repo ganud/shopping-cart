@@ -3,11 +3,11 @@ import { useOutletContext } from "react-router-dom";
 import CartItem from "./CartItem";
 import classes from "./Cart.module.css";
 import getQuantity from "../helpers/getQuantity";
+import getTotal from "../helpers/getTotal";
 
 export default function Cart() {
   const [products, setProducts] = useOutletContext();
   const productsInCart = products.filter((product) => product.quantity !== 0);
-  console.log(productsInCart);
 
   if (getQuantity(products) === 0) {
     return <h2>No items in cart</h2>;
@@ -21,13 +21,15 @@ export default function Cart() {
           Your Cart
           {productsInCart.map((product) => (
             <CartItem
-              image={product.image}
+              product={product}
+              products={products}
+              setProducts={setProducts}
               id={product.id}
-              title={product.title}
-              quantity={product.quantity}
             ></CartItem>
           ))}
-          <div className={classes.priceTotal}>Total: $420.69</div>
+          <div className={classes.priceTotal}>
+            Total: ${getTotal(productsInCart)}
+          </div>
         </div>
       </div>
     </>
