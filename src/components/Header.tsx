@@ -5,9 +5,6 @@ export default function Header({ quantity }: { quantity: number }) {
     <>
       <div className={classes.header}>
         <div className={classes["header-text"]}>Torn n' Corn</div>
-        <div className={classes["header-subtext"]}>
-          We sell stuff torn out of the dumpsters, and maybe corn.
-        </div>
         <div className={classes["container"]}></div>
         <div className={classes.nav}>
           <Link to="/" style={{ textDecoration: "none" }}>

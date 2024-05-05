@@ -28,19 +28,21 @@ export default function Card({ product, id, products, setProducts }) {
     <>
       <div className={classes.container}>
         <img src={`${product.image}`} alt="" className={classes.productImage} />
-        <h1>Price: ${product.price}</h1>
-        <h2>{product.title}</h2>
-        <div className={classes.centered}>
-          <input
-            type="number"
-            min="0"
-            onChange={(event) => setQuantity(parseInt(event.target.value))}
-          />
-        </div>
-        <div className={classes.centered}>
-          <button onClick={() => incrementQuantity(quantity)}>
-            Add to Cart
-          </button>
+        <h1>{product.title}</h1>
+        <h2>${product.price}</h2>
+        <div className={classes.flex_col}>
+          <div className={classes.centered}>
+            <input
+              type="number"
+              min="0"
+              onChange={(event) => setQuantity(parseInt(event.target.value))}
+            />
+          </div>
+          <div className={classes.centered}>
+            <button onClick={() => incrementQuantity(quantity)}>
+              Add to Cart
+            </button>
+          </div>
         </div>
       </div>
     </>

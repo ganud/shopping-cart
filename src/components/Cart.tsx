@@ -10,7 +10,7 @@ export default function Cart() {
   const productsInCart = products.filter((product) => product.quantity !== 0);
 
   if (getQuantity(products) === 0) {
-    return <h2>No items in cart</h2>;
+    return <h2 className={classes.no_items}>No items in cart</h2>;
   }
 
   // Only renders items with a quantity value

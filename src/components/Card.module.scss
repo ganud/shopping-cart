@@ -6,6 +6,8 @@
   padding: 20px;
   border-radius: 10%;
   gap: 10px;
+  border: 3px solid black;
+  justify-content: space-between;
 }
 
 .productImage {
@@ -21,7 +23,7 @@ h2 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-family: "Courier New", Courier, monospace;
   font-weight: 600;
 }
@@ -41,4 +43,17 @@ input {
 .centered {
   display: flex;
   justify-content: center;
+}
+
+.flex_col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.productImage {
+  min-height: 50px;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  object-fit: contain;
 }
